@@ -27,7 +27,7 @@ class App {
   }
 
   routes() {
-    this.app.use("/", blogRouter);
+    this.app.use("/api/v1/blog", blogRouter);
   }
 }
 
