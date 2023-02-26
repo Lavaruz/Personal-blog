@@ -12,9 +12,9 @@ export default function Blogs({ blogs }: BlogProps) {
   blogs = blogs.slice(1, 12 + 1);
   return (
     <div className="container">
-      <div className="w-full mb-32 mt-8">
+      <div className="w-full mb-12 mt-8">
         <h3 className="mb-8">{">>>"} most recent blog</h3>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 gap-4">
           {blogs.map((blog, index) => {
             blog.body = blog.body.substring(0, 100) + " ...";
             return (
@@ -26,7 +26,7 @@ export default function Blogs({ blogs }: BlogProps) {
                   <h3 className="font-bold text-xl mb-2">{blog.title}</h3>
                   <p className="text-sm text-slate-400 mb-4 group-hover:text-slate-300">
                     tags:{" "}
-                    <span className="text-slate-500 group-hover:text-slate-200">
+                    <span className="text-slate-500 group-hover:text-slate-200 text-sm">
                       backend
                     </span>
                   </p>

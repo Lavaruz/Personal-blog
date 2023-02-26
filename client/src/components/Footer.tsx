@@ -11,26 +11,6 @@ export default function Footer() {
               cupiditate.
             </p>
           </div>
-          <div className="social flex items-center justify-center gap-4 ">
-            <a
-              href=""
-              className="p-4 border border-slate-500 rounded-full hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
-            >
-              FB
-            </a>
-            <a
-              href=""
-              className="p-4 border border-slate-500 rounded-full hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
-            >
-              Github
-            </a>
-            <a
-              href=""
-              className="p-4 border border-slate-500 rounded-full hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
-            >
-              IG
-            </a>
-          </div>
         </div>
       </div>
     </div>
