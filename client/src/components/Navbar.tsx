@@ -10,7 +10,7 @@ export default function Navbar() {
               </h3>
             </div>
             <div className="list">
-              <a href="" className="">
+              <a href="https://lavaruz-porfolio.vercel.app/" className="">
                 me
               </a>
             </div>

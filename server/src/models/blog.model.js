@@ -10,6 +10,8 @@ let blogSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  createdDate: Date,
+  tags: Array,
 });
 
 export default mongoose.model("Blog", blogSchema);
