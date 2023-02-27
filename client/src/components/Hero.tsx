@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
     <div className="bg-slate-100">
-      <div className="containe">
-        <div className="w-full flex flex-col justify-center items-center gap-4 py-32">
-          <h1 className="font-semibold px-2 text-2xl text-center lg:text-2xl text-slate-900 mb-4">
+      <div className="container">
+        <div className="w-full flex flex-col justify-center items-center gap-4 py-32 lg:px-32">
+          <h1 className="font-semibold text-2xl text-center lg:text-2xl text-slate-900 mb-4">
             a Place for my thoughts, finds, and opinions
           </h1>
           <p className="text-slate-400 text-sm">tags: </p>

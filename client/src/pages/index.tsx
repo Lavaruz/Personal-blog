@@ -1,8 +1,10 @@
 import { Inter } from "next/font/google";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const Blogs = dynamic(() => import("@/components/Blogs"));
 
 const inter = Inter({ subsets: ["latin"] });
 
