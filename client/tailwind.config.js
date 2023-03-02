@@ -13,7 +13,14 @@ module.exports = {
       center: true,
       padding: "1rem",
     },
-    extend: {},
+    extend: {
+      colors: {
+        big: "#1e293b", //800
+        med: "#475569", //700
+        small: "#94a3b8", //400
+        back: "#64748b", //500
+      },
+    },
   },
   plugins: [],
 };

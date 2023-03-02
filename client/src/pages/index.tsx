@@ -23,10 +23,13 @@ export default function Home(props: BlogProps) {
   return (
     <>
       <div className="">
-        <Navbar></Navbar>
-        <Hero></Hero>
-        <Blogs blogs={blogPost}></Blogs>
-        <Footer></Footer>
+        {/* <Navbar></Navbar> */}
+        <div className="lg:grid lg:grid-cols-[1fr_max-content_.4fr] flex flex-col-reverse">
+          <Blogs blogs={blogPost}></Blogs>
+          <div className="hidden lg:block lg:h-screen lg:w-0.5 lg:mx-2 lg:bg-slate-100 lg:sticky lg:top-0"></div>
+          <Hero></Hero>
+        </div>
+        {/* <Footer></Footer> */}
       </div>
     </>
   );

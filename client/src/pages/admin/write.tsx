@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 function Editor() {
   const editorRef = useRef();
   const [editorLoaded, setEditorLoaded] = useState(false);
-  const { CKEditor, Editor } = editorRef.current || {};
+  const { CKEditor, ClasicEditor } = editorRef.current || {};
 
   useEffect(() => {
     editorRef.current = {
       CKEditor: require("@ckeditor/ckeditor5-react").CKEditor,
-      Editor: require("ckeditor5-custom-build/build/ckeditor"),
+      ClasicEditor: require("@ckeditor/ckeditor5-build-classic"),
     };
     setEditorLoaded(true);
   }, []);
@@ -19,7 +19,7 @@ function Editor() {
         {editorLoaded ? (
           <CKEditor
             className="mt-3 wrap-ckeditor"
-            editor={Editor}
+            editor={ClasicEditor}
             config={{ placeholder: "Tell your story" }}
             onReady={(editor) => {
               // You can store the "editor" and use when it is needed.
