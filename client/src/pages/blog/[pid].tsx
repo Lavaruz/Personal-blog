@@ -41,5 +41,10 @@ export async function getServerSideProps(context) {
   const blogPost = await res.json();
 
   // Pass data to the page via props
+  if (blogPost.length == 0) {
+    return {
+      notFound: true,
+    };
+  }
   return { props: { blogPost } };
 }

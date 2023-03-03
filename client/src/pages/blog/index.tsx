@@ -31,7 +31,7 @@ export default function Blog(props: BlogProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   // Fetch data from external API
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const blogPost = await res.json();
