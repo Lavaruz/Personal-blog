@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Post {
   id: number;
   title: string;
@@ -34,31 +36,30 @@ export default function Blogs({ blogs }: BlogProps) {
         <div className="grid gap-8 lg:pr-24 divide-y divide-slate-200">
           {blogs.map((blog, index) => {
             return (
-              <div
-                key={index}
-                className="card p-4 border-small rounded-lg hover:-translate-y-1 group hover:shadow-xl hover:border-small hover:bg-back transition cursor-pointer duration-300 ease-in-out"
-              >
-                <div className="card-title">
-                  <h3 className="font-semibold text-xl mb-2 text-big group-hover:text-white">
-                    {titleCase(blog.title)}
-                  </h3>
-                </div>
-                <div className="card-body">
-                  <p className="text-slate-600 group-hover:text-slate-200 text-base">
-                    {blog.body.split(" ").slice(0, 20).join(" ")}
-                    <span className="text-med font-semibold">
-                      ... Read more
-                    </span>
-                  </p>
+              <Link href={"/blog/" + blog.title} key={index}>
+                <div className="card p-4 border-small rounded-lg hover:-translate-y-1 group hover:shadow-xl hover:border-small hover:bg-back transition cursor-pointer duration-300 ease-in-out">
+                  <div className="card-title">
+                    <h3 className="font-semibold text-xl mb-2 text-big group-hover:text-white">
+                      {titleCase(blog.title)}
+                    </h3>
+                  </div>
+                  <div className="card-body">
+                    <p className="text-slate-600 group-hover:text-slate-200 text-base">
+                      {blog.body.split(" ").slice(0, 20).join(" ")}
+                      <span className="text-med font-semibold">
+                        ... Read more
+                      </span>
+                    </p>
 
-                  <p className="text-sm text-small mt-4 group-hover:text-slate-300">
-                    tags:{" "}
-                    <span className="text-slate-600 text-xs py-1 px-2 bg-slate-200 rounded-full">
-                      backend
-                    </span>
-                  </p>
+                    <p className="text-sm text-small mt-4 group-hover:text-slate-300">
+                      tags:{" "}
+                      <span className="text-slate-600 text-xs py-1 px-2 bg-slate-200 rounded-full">
+                        backend
+                      </span>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

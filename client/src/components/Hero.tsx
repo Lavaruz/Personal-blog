@@ -25,15 +25,15 @@ export default function Hero() {
             </p>
 
             <h2 className="text-xl font-semibold text-big pt-6 mb-2">About</h2>
-            <p className="text-sm text-med tracking-wide">
+            <p className="text-sm text-med">
               Distiction Graduate Student at Bangkit Academy led by Google,
               Tokopedia, Gojek, & Traveloka.
             </p>
-            <p className="text-sm text-med tracking-wide pt-2">
+            <p className="text-sm text-med pt-2">
               Proificient at Server-Side Programming such as Creating
               RESTfulAPI, Databases Management, Unit Test, etc.
             </p>
-            <p className="text-sm text-med tracking-wide pt-2">
+            <p className="text-sm text-med pt-2">
               Currently focusing on{" "}
               <span className="font-bold">Express JS</span>
             </p>
