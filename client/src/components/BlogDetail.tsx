@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 
 function titleCase(str) {
@@ -17,12 +18,12 @@ export default function BlogDetail({ pid }) {
           <h3 className="text-2xl font-semibold text-big">
             <Link href={"/blog"}>Article</Link>
           </h3>
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-semibold text-med hover:text-small lg:block hidden"
           >
             Check my Full Profile
-          </a>
+          </Link>
         </div>
         <hr className="mb-8" />
         <div className="lg:pr-10">
@@ -39,12 +40,15 @@ export default function BlogDetail({ pid }) {
             </p>
           </div>
           <div className="content">
-            <p className="text-big text-xl font-serif leading-8">
+            <p className="text-big text-[1.22rem] font-serif leading-8">
               {pid.body} Lorem ipsum dolor, sit amet consectetur adipisicing
               elit. Atque sapiente vel eveniet cumque consequuntur omnis nisi
               vitae est molestias, porro explicabo quos assumenda fugit aliquid
               nulla esse tempore. Dicta maiores asperiores ducimus aspernatur
               eveniet assumenda sed iure.
+              <br />
+              <br />
+              Let's get started
               <br />
               <br />
               Ea ipsam totam quis dolorem sit vitae sapiente. Adipisci rem

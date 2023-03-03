@@ -25,12 +25,12 @@ export default function Blogs({ blogs }: BlogProps) {
       <div className="w-full lg:mb-12 mt-8 lg:px-24">
         <div className="flex justify-between items-center mb-6 lg:mb-12">
           <h3 className="text-2xl font-semibold text-big pl-4">Article</h3>
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-semibold text-med hover:text-small lg:block hidden"
           >
             Check my Full Profile
-          </a>
+          </Link>
         </div>
         <hr className="mb-8" />
         <div className="grid gap-8 lg:pr-24 divide-y divide-slate-200">
