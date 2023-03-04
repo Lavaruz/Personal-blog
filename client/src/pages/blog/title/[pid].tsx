@@ -43,7 +43,11 @@ export async function getServerSideProps(context) {
   // Pass data to the page via props
   if (blogPost.length == 0) {
     return {
-      notFound: true,
+      // notFound: true,
+      redirect: {
+        destination: "/blog",
+        permanent: false,
+      },
     };
   }
   return { props: { blogPost } };

@@ -15,10 +15,19 @@ function Editor() {
 
   return (
     <div className="container">
-      <div className="w-full h-full py-20">
+      <div className="w-full h-full py-20 px-20">
+        <div className="mb-10">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Input title here.."
+            className="placeholder:italic p-4 rounded text-xl w-full focus:border-slate-300 focus:ring-slate-300"
+          />
+        </div>
         {editorLoaded ? (
           <CKEditor
-            className="mt-3 wrap-ckeditor"
+            className="mt-3 wrap-ckeditor text-xl"
             editor={ClasicEditor}
             config={{ placeholder: "Tell your story" }}
             onReady={(editor) => {

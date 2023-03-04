@@ -36,7 +36,7 @@ export default function Blogs({ blogs }: BlogProps) {
         <div className="grid gap-8 lg:pr-24 divide-y divide-slate-200">
           {blogs.map((blog, index) => {
             return (
-              <Link href={"/blog/" + blog.title} key={index}>
+              <Link href={"/blog/title/" + blog.title} key={index}>
                 <div className="card p-4 border-small rounded-lg hover:-translate-y-1 group hover:shadow-xl hover:border-small hover:bg-back transition cursor-pointer duration-300 ease-in-out">
                   <div className="card-title">
                     <h3 className="font-semibold text-xl mb-2 text-big group-hover:text-white">
