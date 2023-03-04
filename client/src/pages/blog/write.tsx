@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 function Editor() {
+  const [titleData, setTitleData] = useState("");
   const [ckdata, setCkData] = useState("");
   const editorRef = useRef();
   const [editorLoaded, setEditorLoaded] = useState(false);
@@ -37,7 +39,7 @@ function Editor() {
             className="mt-3 wrap-ckeditor text-xl"
             editor={Editor}
             config={editorConfiguration}
-            onChange={(event, editor) => {
+            onChange={(editor) => {
               const data = editor.getData();
               setCkData(data);
             }}
@@ -56,6 +58,9 @@ function Editor() {
           </button>
         </div>
       </div>
+      <Link href={"/blog"} className="absolute top-4 left-4">
+        Back
+      </Link>
     </div>
   );
 }
